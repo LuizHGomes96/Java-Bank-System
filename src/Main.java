@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Account account = new Account();
+		Account account = new Account(0,0,0);
 		Scanner scanner = new Scanner(System.in);
 		boolean logged = true;
 
@@ -19,13 +19,13 @@ public class Main {
 				break;
 			case (2):
 				System.out.println("How much do you want to deposit?");
-				account.depositing = scanner.nextDouble();
-				account.deposit(account.depositing);
+				account.setDepositing(scanner.nextDouble());
+				account.deposit(account.getDepositing());
 				break;
 			case (3):
 				System.out.println("How much do you want to withdraw?");
-				account.withdrawing = scanner.nextDouble();
-				account.withdraw(account.withdrawing);
+				account.setWithdrawing(scanner.nextDouble());
+				account.withdraw(account.getWithdrawing());
 				break;
 			case (4):
 				System.out.println("Goodbye!");

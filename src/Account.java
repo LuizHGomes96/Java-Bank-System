@@ -1,10 +1,44 @@
 
 public class Account {
 
-	double balance = 0;
-	double depositing;
-	double withdrawing;
+	private double balance = 0;
+	private double depositing;
+	private double withdrawing;
 	
+	Account(double balance, double depositing, double withdrawing){
+		this.setBalance(balance);
+		this.setDepositing(depositing);
+		this.setWithdrawing(withdrawing);
+	}
+	
+	
+	// GETTERS
+	public double getBalance() {
+		return balance;
+	}
+	
+	public double getDepositing() {
+		return depositing;
+	}
+	
+	public double getWithdrawing() {
+		return withdrawing;
+	}
+	
+	// SETTERS
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	
+	public void setDepositing(double depositing) {
+		this.depositing = depositing;
+	}
+	
+	public void setWithdrawing(double withdrawing) {
+		this.withdrawing = withdrawing;
+	}
+	
+	// OPTIONS	
 	void deposit(double depositing) {
 		balance += depositing;
 		System.out.printf("You deposited $%.2f", depositing);
@@ -31,6 +65,8 @@ public class Account {
 		System.out.println();
 	}
 	
+	
+	// MENU
 	void menu() {
 		System.out.println("############### MENU ###############");
 		System.out.println("1 - Check your account balance");
